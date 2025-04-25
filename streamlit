@@ -1,0 +1,26 @@
+import streamlit as st
+import pandas as pd
+
+st.title("📍 Smart Meeting Room Location Map")
+
+# Sample lat/lon data for rooms (replace with your own coordinates)
+room_locations = pd.DataFrame({
+    "Room": ["Room A", "Room B", "Room C"],
+    "lat": [12.9716, 12.9718, 12.9720],
+    "lon": [77.5946, 77.5948, 77.5950],
+})
+
+selected_rooms = st.multiselect("Show rooms on map", room_locations["Room"].tolist(), default=room_locations["Room"].tolist())
+filtered = room_locations[room_locations["Room"].isin(selected_rooms)]
+
+st.map(filtered, zoom=17)
+
+
+tower 6: 
+28.538549259883805, 77.33857400717758
+
+tower 4: 
+28.538605811289006, 77.34124548735039
+
+tower 1:
+28.536188944142335, 77.34400457694633

@@ -1,6 +1,6 @@
 import streamlit as st
 
-IMAGE_URL = "https://media.githubusercontent.com/media/NVIDIA/AgentIQ/develop/docs/source/_static/agentiq_gitdiagram.png"
+IMAGE_URL = "https://media.githubusercontent.com/media/NVIDIA/AIQToolkit/develop/docs/source/_static/aiqtoolkit_gitdiagram.png"
 
 
 st.image(IMAGE_URL, caption="NVIDIA AgentIQ")
